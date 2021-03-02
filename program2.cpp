@@ -87,7 +87,7 @@ void get_x_player_choice() {
 }
 
 
-// the function get_o_player_choice will get the choice from player X
+// the function get_o_player_choice will get the choice from player o
 void get_o_player_choice() {
     while(true) {
         cout << "Select Your Position (1 – 9): " ;
