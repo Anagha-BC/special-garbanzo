@@ -12,14 +12,13 @@ void get_computer_choice();
 int count_board(char symbol);
 char check_winner();
 void computer_vs_player(); 
-er
+
 
 int main()
 {
     computer_vs_player();
     return 0;
 }
-
 
 
 // computer_vs_player function in which the user will play the game against computer
@@ -146,6 +145,8 @@ char check_winner() {
     else
         return 'D';
 }
+
+
 // the function show_board will show the board on screen
 void show_board() {
 
