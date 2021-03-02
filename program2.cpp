@@ -3,7 +3,7 @@
 #include <random>
 using namespace std;
 
-
+// array of characters to store the board data
 char board[9] = {' ' , ' ' , ' ' , ' ' , ' ' , ' ' , ' ' , ' ' , ' '};
 void show_board();
 void get_x_player_choice();
@@ -11,8 +11,8 @@ void get_o_player_choice();
 void get_computer_choice();
 int count_board(char symbol);
 char check_winner();
-void computer_vs_player();
-
+void computer_vs_player(); 
+er
 
 int main()
 {
@@ -20,6 +20,8 @@ int main()
     return 0;
 }
 
+
+// computer_vs_player function in which the user will play the game against computer
 void computer_vs_player() {
     string player_name;
     cout << "Enter Your Name: ";
@@ -63,14 +65,16 @@ void get_computer_choice() {
     board[choice] = 'O';
 }
 
+
+// the function get_x_player_choice will get the choice from player X
 void get_x_player_choice() {
     while(true) {
-        cout <<"Select Your Position (1 – 9): " ;
+        cout <<"Select Your Position (1 â€“ 9): " ;
         int choice;
         cin >> choice;
         choice--;
         if(choice < 0 || choice > 8) {
-            cout << "Please Select Your Choice From (1 – 9)." << endl;
+            cout << "Please Select Your Choice From (1 â€“ 9)." << endl;
         }
         else if(board[choice] != ' ') {
             cout << "Please Select An Empty Position." << endl;
@@ -82,14 +86,16 @@ void get_x_player_choice() {
     }
 }
 
+
+// the function get_o_player_choice will get the choice from player X
 void get_o_player_choice() {
     while(true) {
-        cout << "Select Your Position (1 – 9): " ;
+        cout << "Select Your Position (1 â€“ 9): " ;
         int choice;
         cin >> choice;
         choice--;
         if(choice < 0 || choice > 8) {
-            cout << "Please Select Your Choice From (1 – 9)." << endl;
+            cout << "Please Select Your Choice From (1 â€“ 9)." << endl;
         }
         else if(board[choice] != ' ') {
             cout << "Please Select An Empty Position." << endl;
@@ -102,7 +108,7 @@ void get_o_player_choice() {
 }
 
 
-
+// the function count_board will count the board and it will accept a character symbol that it will count on the board
 int count_board(char symbol) {
     int total = 0;
     for(int i=0; i<9; i++) {
@@ -112,6 +118,8 @@ int count_board(char symbol) {
     return total;
 }
 
+
+// check_winner function check or identify the winner
 char check_winner() {
     // checking winner in horizontal/row
     if(board[0] == board[1] && board[1] == board[2] && board[0] != ' ')
@@ -137,7 +145,7 @@ char check_winner() {
     else
         return 'D';
 }
-
+// the function show_board will show the board on screen
 void show_board() {
 
     cout << "   " << "   |   " << "   |   " << endl;
